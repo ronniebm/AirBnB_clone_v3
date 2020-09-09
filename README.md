@@ -159,7 +159,7 @@ Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://tw
 Adonis Tejeda - [Github](https://github.com/adonis7ejeda) / [Twitter](https://twitter.com/adonis7ejeda)  
 Ronnie Barrios - [Github](https://github.com/ronniebm) / [Twitter](https://twitter.com/ronniealberto)  
 
-Third part of Airbnb: Adonis7ejeda & Ronnie Barrios.
+Third part of Airbnb: Adonis Tejeda & Ronnie Barrios.
 
 ## License
 Public Domain. No copy write protection. 
