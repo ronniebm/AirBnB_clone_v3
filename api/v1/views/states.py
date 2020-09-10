@@ -3,10 +3,10 @@
 A new view for State objects that handles
 all default RestFul API actions
 """
-from api.v1.views import app_views
 from flask import abort, jsonify, request
 from models import storage
 from models.state import State
+from api.v1.views import app_views
 
 
 @app_views.route('/states/<state_id>', methods=['GET'], strict_slashes=False)
