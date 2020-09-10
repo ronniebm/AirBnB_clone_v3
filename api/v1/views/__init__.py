@@ -7,3 +7,4 @@ from models.state import State
 from api.v1.views.states import *
 from models.state import City
 from api.v1.views.cities import *
+from api.v1.views.amenities import *
