@@ -31,7 +31,9 @@ def get_state(state_id=None):
             abort(404)
 
 
-@app_views.route('/states/<state_id>', methods=['DELETE'], strict_slashes=False)
+@app_views.route('/states/<state_id>',
+                 methods=['DELETE'],
+                 strict_slashes=False)
 def delete_state(state_id=None):
     """response to 'DELETE'"""
 
@@ -40,14 +42,14 @@ def delete_state(state_id=None):
 
     if state_id is None:
         abort(404)
-    
+
     for key, value in new_dict.items():
 
         if value.id == state_id:
             storage.delete(value)
             storage.save()
             return jsonify(empty), 200
-    
+
     abort(404)
 
 
