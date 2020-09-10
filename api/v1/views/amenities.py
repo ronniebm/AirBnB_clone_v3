@@ -100,4 +100,4 @@ def update_amenity(amenity_id):
 
     amenity.save()
 
-    return jsonify(amenity.to_dict()), 20
+    return jsonify(amenity.to_dict()), 200
