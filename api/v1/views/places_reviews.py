@@ -6,6 +6,7 @@ all default RestFul API actions
 from flask import abort, jsonify, request
 from models import storage
 from models.place import Place
+from models.review import Review
 from api.v1.views import app_views
 
 
@@ -43,7 +44,8 @@ def indv_review(review_id):
         return jsonify(rev_obj.to_dict())
 
 
-@app_views.route('/reviews/<review_id>', methods=['DELETE'],
+@app_views.route('/reviews/<review_id>',
+                 methods=['DELETE'],
                  strict_slashes=False)
 def del_review(review_id):
     """Deletes a Review object."""
@@ -87,9 +89,9 @@ def create_review(place_id):
         return jsonify({"error": "Missing text"}), 400
 
     else:
-        u_id = req["user_id"]
-        text = req["text"]
-        review = Review(user_id=u_id, text=text, place_id=place_id)
+        uid = req["user_id"]
+        txt = req["text"]
+        review = Review(user_id=uid, text=txt, place_id=place_id)
 
         for key, value in req.items():
             setattr(review, key, value)
